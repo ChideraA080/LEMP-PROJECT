@@ -27,14 +27,14 @@ In my AWS console, I launched an EC2 instance using Ubuntu Server. I configured 
 
 2. HTTP (Port 80) for web access.
 
-![Lunch Instance](https://github.com/ChideraA080/LAMP-PROJECT/blob/main/LAMP/Screenshot-of-Instance-running-with-Public-IP-Address.png)
+![Lunch Instance](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20Showing%20EC2%20instance%20running%20with%20public%20IP.png)
 ## Connect to the EC2 Instance
 
 To connect to the EC2 instance I used Git Bash.I launched Git Bash and run this command to connect to the EC2:
 
 ```ssh -i "your-key.pem" ubuntu@<your-ec2-public-ip>```
 
-![Connect to instance](./images/git-bash-connect-to-ssh-1.png)
+![Connect to instance](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20of%20Gitbash%20Launch.png)
 
 
 ## Installing the Nginx Web Server
@@ -55,14 +55,14 @@ sudo systemctl status nginx  # Check Nginx status
 
 If Nginx is running correctly, you will see active (running in green) as the output.
 
-```![Upgrade Packages](./images/sudo-apt-update-2.png)```
+![Nginx status](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20Showing%20Nginx%20Installed.png)
 ## To Access Nginx locally on the Ubuntu shell
 
 ```
 curl http://localhost:80
 ```
 
-![Local URL](./images/curl-http-localhost-80.png)
+![Local URL](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20showing%20we%20can%20access%20our%20nginx%20locally%20in%20Ubuntu.png)
 ## To Test Nginx with Public IP address 
 
 Go to your browser,navigate and paste this command:
@@ -73,9 +73,9 @@ http://<ec2-instance-public-ip>
 
 You should see the Nginx welcome page like this below:
 
-```
-![Nginx Default Page](./images/Browse-Public-IP-80.png
-```
+
+![Nginx Default Page](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20showing%20how%20nginx%20respond%20to%20Web%20browser%20.png)
+
 
 ## Installing MYSQL
 
@@ -121,6 +121,7 @@ FLUSH PRIVILEGES;
 
 EXIT;
 ```
+![MYSQL Security Script](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20after%20running%20mysql%20script%20and%20Password%20testing.png)
 
 ## Installing PHP
 
@@ -206,7 +207,7 @@ sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
 sudo nginx -t
 ```
 
-![Test syntax](./images/![Link config](./images/sudo_ln-s_etc_nginx_sites-available_projectLEMP_syntex-error-check.png)
+![Test syntax](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20showing%20nginx%20syntax%20Configuration%20working.png)
 
 6. Disable the default Nginx host that currently configured to listen on port 80:
 
@@ -256,7 +257,7 @@ Go to your browser and paste:
 http://<ec2-instance-public-ip>/info.php
 ```
 
-![PHP page](./images/Browse-Public-IP-info-PHP.png)
+![PHP page](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20of%20PHP%20after%20setting%20nginx%20configuration.png)
 
 Don't forget to remove the info.php when done as it holds very sensitive information about you web server.To do that run :
 
@@ -307,7 +308,7 @@ The -p flag will prompt for password used when creating the example_user
 SHOW DATABASES;
 ```
 
-![Show database](./images/SHOW-DATABASES.png)
+![Show database](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20Showing%20example_user%20DATABASES.png)
 
 7. Create a table called Todo_list,FRom MYSQL console,run the following statement:
 
@@ -334,7 +335,7 @@ INSERT INTO example_database.todo_list (content) VALUES ("My third important ite
 ```
 SELECT * FROM example_database.todo_list;
 ```
-![Query table](./images/mysql-show-table-content.png)
+![Query table](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20showing%20%20todo_list%20data%20output%20via%20Mysql%20console.png)
 
 10. exit
 ## Configuring Nginx for PHP Processing
@@ -378,7 +379,7 @@ http://<Public-IP>/todo_list.php
 
 The content will be displayed as below
 
-![Updated site with dns](./images/Browse-PublicDNS-IP-80-todo_list-php-file-showing.png)
+![Updated site with dns](https://github.com/ChideraA080/LEMP-PROJECT/blob/main/LEMP%20IMAGE/Screenshot%20showing%20todo_list%20.php%20Script%20output%20on%20web%20browser.png)
 ## Challenges Faced
 
  1. 404 Not Found Error
